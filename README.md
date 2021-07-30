@@ -1,1 +1,3 @@
-# yeti-json-schema
+# Yeti JSON Schemas
+
+JSON validator https://www.jsonschemavalidator.net/
