@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Yeti - BRA",
+  "description": "",
+  "type": "object",
+  "required": ["zones"],
+  "properties": {
+    "zones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["zone", "validUntil", "danger", "orientations"],
+        "properties": {
+          "zone": {
+            "type": "string"
+          },
+          "validUntil": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "danger": {
+            "type": "object",
+            "required": ["low", "max", "comment"],
+            "properties": {
+              "low": {
+                "oneOf": [{
+                  "type": "number"
+                }, {
+                  "type": "null"
+                }]
+              },
+              "max": {
+                "oneOf": [{
+                  "type": "number"
+                }, {
+                  "type": "null"
+                }]
+              },
+              "comment": {
+                "type": "string"
+              }
+            }
+          },
+          "orientations": {
+            "type": "object",
+            "required": ["ne", "e", "se", "s", "sw", "w", "nw", "n"],
+            "properties": {
+              "ne": {
+                "type": "boolean"
+              },
+              "e": {
+                "type": "boolean"
+              },
+              "se": {
+                "type": "boolean"
+              },
+              "s": {
+                "type": "boolean"
+              },
+              "sw": {
+                "type": "boolean"
+              },
+              "w": {
+                "type": "boolean"
+              },
+              "nw": {
+                "type": "boolean"
+              },
+              "n": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
