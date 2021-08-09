@@ -20,18 +20,47 @@
           },
           "danger": {
             "type": "object",
-            "required": ["low", "max", "comment"],
+            "required": ["low", "max"],
+            "dependentRequired": {
+              "high": ["altitude"],
+              "highEvol": ["high"],
+              "altitude": ["high"]
+            },
             "properties": {
               "low": {
                 "oneOf": [{
-                  "type": "number"
+                  "type": "integer",
+                  "minimum": "1",
+                  "maximum": "5"
                 }, {
                   "type": "null"
                 }]
               },
+              "lowEvol": {
+                "type": "integer",
+                "minimum": "1",
+                "maximum": "5"
+              },
+              "high": {
+                "type": "integer",
+                "minimum": "1",
+                "maximum": "5"
+              },
+              "highEvol": {
+                "type": "integer",
+                "minimum": "1",
+                "maximum": "5"
+              },
+              "altitude": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 5000
+              },
               "max": {
                 "oneOf": [{
-                  "type": "number"
+                  "type": "integer",
+                  "minimum": "1",
+                  "maximum": "5"
                 }, {
                   "type": "null"
                 }]
@@ -68,6 +97,9 @@
               },
               "n": {
                 "type": "boolean"
+              },
+              "comment": {
+                "type": "string"
               }
             }
           }
