@@ -44,7 +44,10 @@
                 "maximum": 5
               },
               "locLow": {
-                "enum": ["E", "W", "N", "S"]
+                "enum": ["E", "W", "N", "S"],
+                "not": {
+                  "required": ["altitude"]
+                }
               },
               "high": {
                 "type": "integer",
@@ -57,7 +60,10 @@
                 "maximum": 5
               },
               "locHigh": {
-                "enum": ["E", "W", "N", "S"]
+                "enum": ["E", "W", "N", "S"],
+                "not": {
+                  "required": ["altitude"]
+                }
               },
               "altitude": {
                 "type": "string",
