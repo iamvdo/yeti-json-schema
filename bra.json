@@ -24,7 +24,9 @@
             "dependentRequired": {
               "high": ["altitude"],
               "highEvol": ["high"],
-              "altitude": ["high"]
+              "altitude": ["high"],
+              "locLow": ["locHigh", "high"],
+              "locHigh": ["locLow", "high"]
             },
             "properties": {
               "low": {
@@ -41,6 +43,9 @@
                 "minimum": "1",
                 "maximum": "5"
               },
+              "locLow": {
+                "enum": ["E", "W", "N", "S"]
+              },
               "high": {
                 "type": "integer",
                 "minimum": "1",
@@ -50,6 +55,9 @@
                 "type": "integer",
                 "minimum": "1",
                 "maximum": "5"
+              },
+              "locHigh": {
+                "enum": ["E", "W", "N", "S"]
               },
               "altitude": {
                 "type": "string",
