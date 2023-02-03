@@ -32,29 +32,29 @@
               "low": {
                 "oneOf": [{
                   "type": "integer",
-                  "minimum": "1",
-                  "maximum": "5"
+                  "minimum": 1,
+                  "maximum": 5
                 }, {
                   "type": "null"
                 }]
               },
               "lowEvol": {
                 "type": "integer",
-                "minimum": "1",
-                "maximum": "5"
+                "minimum": 1,
+                "maximum": 5
               },
               "locLow": {
                 "enum": ["E", "W", "N", "S"]
               },
               "high": {
                 "type": "integer",
-                "minimum": "1",
-                "maximum": "5"
+                "minimum": 1,
+                "maximum": 5
               },
               "highEvol": {
                 "type": "integer",
-                "minimum": "1",
-                "maximum": "5"
+                "minimum": 1,
+                "maximum": 5
               },
               "locHigh": {
                 "enum": ["E", "W", "N", "S"]
@@ -65,8 +65,8 @@
               "max": {
                 "oneOf": [{
                   "type": "integer",
-                  "minimum": "1",
-                  "maximum": "5"
+                  "minimum": 1,
+                  "maximum": 5
                 }, {
                   "type": "null"
                 }]
