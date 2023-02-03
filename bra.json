@@ -52,9 +52,7 @@
                 "maximum": "5"
               },
               "altitude": {
-                "type": "integer",
-                "minimum": 0,
-                "maximum": 5000
+                "type": "string",
               },
               "max": {
                 "oneOf": [{
